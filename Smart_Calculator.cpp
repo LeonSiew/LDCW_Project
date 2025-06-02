@@ -69,4 +69,20 @@ int main() {
         cout << "Excellent! You're saving " << saved << " kWh/day and reducing CO2 by " 
              << co2 << " kg with solar or efficient appliances.\n";
     }
+    else {
+        float wasted = dailyUsage * 0.10;
+        float co2 = wasted * 0.774;
+        cout << "You're potentially wasting " << wasted << " kWh/day and producing " 
+             << co2 << " kg CO2 by not using solar or efficient appliances.\n";
+        cout << "🔋 Recommendation: Invest in solar panels or energy-efficient appliances.\n";
+    }
+
+    
+    carbonReduction = savedEnergy * 0.774;
+
+    cout << "\n--- Smart Living Report ---\n";
+    cout << "Total estimated energy saved per day: " << savedEnergy << " kWh\n";
+    cout << "Total estimated CO2 reduction per day: " << carbonReduction << " kg\n";
+
+    return 0;
 }
